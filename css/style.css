@@ -1,0 +1,164 @@
+/* General Styles */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f7fa;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #00796b;
+}
+
+
+/* Loader Styles */
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1000;
+}
+
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #00796b;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Form Styles */
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form .question {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+form .options {
+    margin: 10px 0;
+}
+
+form .options label,
+form .options input {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+form label {
+    font-weight: bold;
+    color: #00796b;
+}
+
+form input[type="text"],
+form select {
+    padding: 10px;
+    border: 1px solid #b2dfdb;
+    border-radius: 4px;
+    width: calc(100% - 22px);
+}
+
+form input[type="text"]:focus,
+form select:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px 5px;
+    background: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #004d40;
+}
+
+
+/* Quiz Interface Styles */
+
+#quiz-container {
+    text-align: left;
+}
+
+#quiz-question {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+#quiz-options div {
+    margin-bottom: 10px;
+}
+
+#quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Result Screen Styles */
+
+#result-text {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+    #quiz-navigation {
+        flex-direction: column;
+    }
+}

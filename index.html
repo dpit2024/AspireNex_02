@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz Maker</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq9mGX9W3pxxwM5WOzVGvBVZ_UrFagSFPbmQ&s" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Quiz Creation Form -->
+    <div id="quiz-creation" class="container">
+        <h1>Create a Quiz</h1>
+        <form id="quiz-form">
+            <div id="question-container">
+                <div class="question">
+                    <label for="question-1">Question 1:</label>
+                    <input type="text" id="question-1" name="question-1" required>
+                    <div class="options">
+                        <label for="q1-option1">Option 1:</label>
+                        <input type="text" id="q1-option1" name="q1-option1" required>
+                        <label for="q1-option2">Option 2:</label>
+                        <input type="text" id="q1-option2" name="q1-option2" required>
+                        <label for="q1-option3">Option 3:</label>
+                        <input type="text" id="q1-option3" name="q1-option3" required>
+                        <label for="q1-option4">Option 4:</label>
+                        <input type="text" id="q1-option4" name="q1-option4" required>
+                    </div>
+                    <label for="correct-answer-1">Correct Answer:</label>
+                    <select id="correct-answer-1" name="correct-answer-1" required>
+                        <option value="1">Option 1</option>
+                        <option value="2">Option 2</option>
+                        <option value="3">Option 3</option>
+                        <option value="4">Option 4</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" id="add-question">Add Question</button>
+            <button type="submit">Create Quiz</button>
+        </form>
+    </div>
+
+    <!-- Quiz Interface -->
+    <div id="quiz-interface" class="container" style="display:none;">
+        <div id="quiz-container">
+            <h1>Quiz</h1>
+            <div id="quiz-question"></div>
+            <div id="quiz-options"></div>
+            <div id="quiz-navigation">
+                <button id="prev-question">Previous</button>
+                <button id="next-question">Next</button>
+                <button id="submit-quiz">Submit</button>
+                <button id="pause-quiz">Pause</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Screen -->
+    <div id="quiz-result" class="container" style="display:none;">
+        <h1>Quiz Results</h1>
+        <p id="result-text"></p>
+        <button id="restart-quiz">Restart Quiz</button>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
